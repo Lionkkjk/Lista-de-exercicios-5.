@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
+
+        double contador = 10;
+        while (contador <= 20){
+            System.out.println("A metade de "+contador+"é "+(contador/2));
+            contador++;
+        }
+    }
+}
