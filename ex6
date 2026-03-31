@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double totalCompra = 0;
+        int continuar = 1;
+
+        System.out.println("====================================");
+        System.out.println("              Cardapio             ");
+        System.out.println("100   Cachorro quente   R$ 1,20");
+        System.out.println("101   Bauru Simples     R$ 1,30");
+        System.out.println("102   Bauru com ovo     R$ 1,50");
+        System.out.println("103   Hambúrguer        R$ 1,20");
+        System.out.println("104   Cheeseburguer     R$ 1,30");
+        System.out.println("105   Refrigerante      R$ 1,00");
+        System.out.println("====================================");
+
+        while (continuar == 1) {
+
+            System.out.print("Digite o codigo do produto: ");
+            int codigo = sc.nextInt();
+
+            System.out.print("Digite a quantidade: ");
+            int quantidade = sc.nextInt();
+
+            double totalProduto = 0;
+
+            if (codigo == 100) {
+                totalProduto = quantidade * 1.20;
+            } else if (codigo == 101) {
+                totalProduto = quantidade * 1.30;
+            } else if (codigo == 102) {
+                totalProduto = quantidade * 1.50;
+            } else if (codigo == 103) {
+                totalProduto = quantidade * 1.20;
+            } else if (codigo == 104) {
+                totalProduto = quantidade * 1.30;
+            } else if (codigo == 105) {
+                totalProduto = quantidade * 1.00;
+            } else {
+                System.out.println("Código inválido!");
+                continue;
+            }
+
+            System.out.println("Total do produto: R$ " + totalProduto);
+
+            totalCompra += totalProduto;
+
+            System.out.print("Deseja continuar comprando? (1 = sim / 0 = não): ");
+            continuar = sc.nextInt();
+        }
+
+        System.out.println("Total geral da compra: R$ " + totalCompra);
+
+        sc.close();
+    }
+}
