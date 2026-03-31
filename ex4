@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    int contador = 1;
+
+    while (contador < 10){
+        System.out.println("Digite sua altura: ");
+        double altura = sc.nextDouble();
+        System.out.println("DIgite seu peso: ");
+        double peso = sc.nextDouble();
+        double imc = peso/(altura * altura);
+        if (imc > 18.5 && imc < 24.9){
+            System.out.println("Esta saúdavel! Seu imc é:"+imc);
+        }
+        else {
+            System.out.println("Não esta saúdavel! Seu imc é:"+imc);
+            contador++;
+        }
+    }
+    sc.close();
+    }
+}
