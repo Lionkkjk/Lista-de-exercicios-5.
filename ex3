@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int numero;
+        int max = 10000000;
+        int contador = 1;
+
+        while (contador < 10) {
+            System.out.println("Digite 10 nuemros interiros positivos e saiba qual é o menor:");
+            numero = sc.nextInt();
+
+            if (numero < max) {
+                max = numero;
+
+            }
+            contador++;
+        }
+        System.out.println("O menor nuemero é: " +max);
+
+    sc.close();
+    }
+}
